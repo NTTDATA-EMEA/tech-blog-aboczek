@@ -1,0 +1,7 @@
+$ ps -ef | grep buildah
+adam     22753 24432  5 09:19 pts/1    00:00:00 buildah bud -t test/cowsay:1.0.0 .
+adam     22761 22753 99 09:19 pts/1    00:00:01 buildah-in-a-user-namespace bud -t test/cowsay:1.0.0 .
+adam     22778 18120  0 09:19 pts/0    00:00:00 grep --color=auto buildah
+$ ps -ef | grep dockerd
+root     15805     1  0 Oct26 ?        00:01:32 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+adam     24295 18120  0 09:20 pts/0    00:00:00 grep --color=auto dockerd
